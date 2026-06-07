@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* 关于我们 页面的样式表 index_aboutus.html*/
+
+/*************** 各个部位的样式 ***************/
+#container {	/* 主内容面板 */
+	width: 1000px;
+	border: medium ridge #000099;
+	margin: 40px auto;
+	background-color: rgba(153,0,255,0.7);
+}
+
+#authormass {
+	text-align: center;
+	color: #6F9;
+	background-color: rgba(78,0,130,0.5);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: thin inset rgba(34,0,57,1);
+}
+#classmass {
+	width: 1000px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #6F9;
+}
+#classmass #title {
+	text-align: center;
+	display: block;
+}
+#classmass strong {
+	font-size: 36px;
+}
+#classmass #article {
+	display: block;
+	padding-top: 20px;
+	padding-right: 70px;
+	padding-bottom: 20px;
+	padding-left: 70px;
+}

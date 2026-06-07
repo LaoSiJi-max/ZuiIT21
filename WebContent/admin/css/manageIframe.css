@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*内部的轮廓*/
+#iframeInside	{
+	width: 800px;
+	height: 450px;
+	position: absolute;
+	margin-top: -240px;
+	margin-left: -400px;
+	left: 50%;
+	top: 50%;
+} 
+/*公共样式*/
+#iframeInside #titleChar {
+	font-weight: bold;
+	color: rgba(204,204,204,1);
+	font-size: 36px;
+	text-align: center;
+}
+#iframeInside form {
+	color: rgba(51,51,51,1);
+}
+
+#iframeInside form #buttonblock {
+	text-align: center;
+}
+#iframeInside form input {
+	background-color: rgba(204,204,204,1);
+}
+#iframeInside form textarea {
+	background-color: rgba(204,204,204,1);
+	width: 90%;
+}
+
+/*主页公告板*/
+#boardTitle	{
+	background-color: #06F;
+	height: 50px;
+	line-height: 50px;
+	color: #FFF;
+	font-size: 24px;
+	text-align: center;
+}
+
+#boardContent	{
+	width: 490px;
+	height: 370px;
+	background-color: rgba(111,139,255,1);
+	font-size: 16px;
+	padding: 30px;
+	overflow: scroll;
+}
+
+#boardNav	{
+	width: 250px;
+	height: 380px;
+	float: right;
+	background-color: rgba(51,0,204,1);
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#contentTitle {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+}
+#iframeInside #boardNav a:link {
+	line-height: 25px;
+	color: rgba(255,255,0,1);
+	text-decoration: none;
+}
+#iframeInside #boardNav a:visited {
+	line-height: 25px;
+	color: rgba(255,255,0,1);
+	text-decoration: none;
+}
+#iframeInside #boardNav a:hover {
+	line-height: 25px;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+/*数据表*/
+#pageCode {
+	text-align: center;
+	color: rgba(255,153,51,1);
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+}
+#searchBox {
+	height: 80px;
+	padding-top: 20px;
+	padding-left: 20px;
+	line-height: 30px;
+}
+#tableBlock {
+	height: 370px;
+	width: 800px;
+}
+#tableBlock table {
+	width: 780px;
+	text-align: center;
+	color: rgba(51,51,51,1);
+}
+#tableBlock table a:link {
+	color: rgba(255,0,0,1);
+}
+#tableBlock table a:visited {
+	color: rgba(255,0,0,1);
+}
+#tableBlock table a:hover {
+	color: rgba(255,255,0,1);
+}
+
+
+
+#tableBlock #tabContent {
+	overflow: scroll;
+	height: 350px;
+}
+
+/* 文章发布 */
+#iframeInside form p #content {
+	width: 98%;
+	height: 280px;
+	background-color: rgba(204,204,204,1);
+	font-size: 18px;
+}
+#iframeInside form p #introduce {
+	width: 90%;
+	height: 100px;
+}
+#iframeInside form #introduce {
+	background-color: rgba(204,204,204,1);
+}
+#iframeInside form select {
+	background-color: rgba(204,204,204,1);
+}
+#iframeInside form p #newFeatures {
+	height: 100px;
+
+}
+/*公告发布*/
+#iframeInside #issueText {
+	width: 98%;
+	height: 300px;
+}
+.Frame_hint {
+	background-image: url(../images/frame/frame01.png);
+	height: 100px;
+	width: 250px;
+	top: 50%;
+	position: fixed;
+	margin-left: -125px;
+	margin-top: -75px;
+	font-family: "微软雅黑";
+	padding-top: 50px;
+	text-align: center;
+	left: 50%;
+	color: rgba(153,153,153,1);
+	font-size: 18px;
+	display: none;
+}
+#iframeInside table tr:nth-of-type(even) {
+	background-color: #EEE;
+}

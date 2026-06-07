@@ -1,0 +1,6 @@
+# Third-party frontend libraries
+WebContent/admin/kindeditor/** linguist-vendored
+
+# Frontend assets are not the main implementation of this Java project
+WebContent/**/js/** linguist-vendored
+WebContent/**/css/** linguist-vendored

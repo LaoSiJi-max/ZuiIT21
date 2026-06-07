@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+	<!-- 前台 -->
+	<package name="home" namespace="/home" extends="struts-default">
+
+        <default-action-ref name="indexAction" />
+
+        <global-results>
+            <result name="error">/WEB-INF/content/error.html</result>
+        </global-results>
+		<!--
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>-->
+
+        <action name="*_*" class="{1}Action" method="{2}">
+            <result name="index">/index.jsp</result>
+            <result name="this">/WEB-INF/content/home/{1}.jsp</result>
+            <result name="success">/WEB-INF/content/home/{1}-{2}.jsp</result>
+        </action>
+    </package>
+    
+    <!-- 后台 -->
+    <package name="admin" namespace="/admin" extends="struts-default">
+    	
+    	<interceptors>  
+            <interceptor name="adminInteceptor" class="com.zihao.ZuiIT21.util.AdminInterceptor" />  
+            <interceptor-stack name="adminStack">  
+                   <interceptor-ref name="adminInteceptor">  
+                       <param name="excludeMethods">login,login_post</param>  
+                   </interceptor-ref>  
+                   <interceptor-ref name="defaultStack"></interceptor-ref>  
+            </interceptor-stack>  
+		</interceptors> 
+		<default-interceptor-ref name="adminStack" /> 
+    	
+    	<default-action-ref name="adminAction" />
+    	
+    	<global-results>
+            <result name="login">/WEB-INF/content/admin/admin-login.jsp</result>
+        </global-results>
+    	
+        <action name="*_*" class="{1}Action" method="{2}">
+            <result name="admin">/admin.jsp</result>
+            <result name="this">/WEB-INF/content/admin/{1}.jsp</result>
+            <result name="success">/WEB-INF/content/admin/{1}-{2}.jsp</result>
+        </action>
+    </package>
+
+</struts>
